@@ -1,0 +1,7 @@
+---
+applications:
+  - name: app-ui
+    memory: 512M
+    instances: 1
+    host: app-ui
+    buildpack: staticfile_buildpack

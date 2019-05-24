@@ -1,0 +1,35 @@
+resource_types:
+  - name: git
+    type: docker-image
+    source:
+      repository: concourse/git-resource
+      tag: 1.3.0
+resources:
+  - name: git-repo
+    type: git
+    source:
+      uri: {{GIT_REPO}}
+      branch: Development
+  - name: deploy-app-ui
+    type: cf
+    source:
+      api: {{CF_API}}
+      username: {{CF_USER}}
+      password: {{CF_PASS}}
+      organization: {{CF_TEST_ORG}}
+      space: {{CF_TEST_SPACE}}
+      skip_cert_check: true
+
+jobs:
+  - name: app-ui
+    serial: true
+    plan:
+      - get: git-repo
+        trigger: true
+      - task: build-app-ui
+        file: git-repo/ci/tasks/build-artifact_ui.yml
+      - put: deploy-app-ui
+        params:
+          manifest: git-repo/manifest.yml
+          current_app_name: app-ui
+          path: app-ui/
