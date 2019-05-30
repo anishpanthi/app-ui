@@ -5,6 +5,7 @@ set -e
 cd git-repo
 npm install
 npm install -g @angular/cli
+ng analytics off
 ng build --prod
 
 cp package.json ../app-ui-dist
