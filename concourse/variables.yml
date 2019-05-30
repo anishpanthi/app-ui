@@ -1,5 +1,4 @@
-GIT_REPO: git@github.com:anishpanthi/app-ui.git
-GIT_PRIVATE_KEY: ((private-repo-key))
+GIT_REPO: https://github.com/anishpanthi/app-ui.git
 PCF_API: https://api.run.pivotal.io
 PCF_ORG: anishpanthi.org
 PCF_SPACE: app

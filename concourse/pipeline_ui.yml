@@ -10,7 +10,6 @@ resources:
     source:
       uri: {{GIT_REPO}}
       branch: master
-      private_key: {{GIT_PRIVATE_KEY}
   - name: deploy-app-ui
     type: cf
     source:
@@ -28,9 +27,9 @@ jobs:
       - get: git-repo
         trigger: true
       - task: build-app-ui
-        file: git-repo/ci/tasks/build-artifact_ui.yml
+        file: git-repo/concourse/tasks/build-artifact_ui.yml
       - put: deploy-app-ui
         params:
           manifest: app-ui-dist/manifest.yml
           current_app_name: app-ui
-          path: app-ui-disy/
+          path: app-ui-dist/

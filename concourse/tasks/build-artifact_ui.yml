@@ -16,7 +16,7 @@ outputs:
   - name: app-ui-dist
 
 run:
-  path: git-repo/ci/scripts/build-artifact_ui.sh
+  path: git-repo/concourse/scripts/build-artifact_ui.sh
 
 params:
   base_name:

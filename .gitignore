@@ -23,6 +23,7 @@ speed-measure-plugin.json
 .settings/
 *.sublime-workspace
 /concourse/credentials.yml
+id_sha
 
 # IDE - VSCode
 .vscode/*
