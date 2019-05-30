@@ -4,7 +4,7 @@ set -e
 #version=`cat version/number`
 cd git-repo
 npm install
-npm run build:app-ui
+npm run build
 #npm install -g @angular/cli
 #ng analytics off
 #ng build --prod
