@@ -31,6 +31,6 @@ jobs:
         file: git-repo/ci/tasks/build-artifact_ui.yml
       - put: deploy-app-ui
         params:
-          manifest: git-repo/manifest.yml
+          manifest: app-ui-dist/manifest.yml
           current_app_name: app-ui
-          path: app-ui/
+          path: app-ui-disy/
