@@ -4,4 +4,4 @@ applications:
     memory: 512M
     instances: 1
     host: app-ui
-    buildpack: https://github.com/cloudfoundry/nginx-buildpack.git
+    buildpack: staticfile_buildpack
