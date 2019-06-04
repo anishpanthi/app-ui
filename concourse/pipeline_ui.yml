@@ -28,6 +28,8 @@ jobs:
         trigger: true
       - task: build-app-ui
         file: git-repo/concourse/tasks/build-artifact_ui.yml
+        params:
+          base_name: app-ui
       - put: deploy-app-ui
         params:
           manifest: app-ui-dist/manifest.yml
