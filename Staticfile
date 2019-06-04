@@ -1,4 +1,1 @@
-location / {
-    root /app-ui;
-    index index.html index.xhtml;
-}
+root /app-ui
