@@ -6,6 +6,7 @@ cd git-repo
 npm install
 npm run build
 
-cp -R ./dist/* ../*
-cp manifest.yml ../*
-cp Staticfile ../*
+ll
+cp -R ./dist/* ../app-ui-dist/
+cp manifest.yml ../app-ui-dist/
+cp Staticfile ../app-ui-dist/
