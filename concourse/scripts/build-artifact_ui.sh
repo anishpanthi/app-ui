@@ -6,7 +6,7 @@ cd git-repo
 npm install
 npm run build
 
-ll
+ls -l
 cp -R ./dist/* ../app-ui-dist/
 cp manifest.yml ../app-ui-dist/
 cp Staticfile ../app-ui-dist/
